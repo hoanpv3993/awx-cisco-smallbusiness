@@ -1,0 +1,11 @@
+---
+- name: Show clock Cisco...!!!
+  hosts: all
+
+  tasks:
+
+  - name: Command Uptime
+    shell: show clock
+    register: clock
+    
+  - debug: msg="{{ clock.stdout }}"
