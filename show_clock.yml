@@ -1,15 +1,13 @@
 ---
-- name: Show clock Cisco...!!!
-  hosts: all
-  gather_facts: false
-  connection: local
-  vars:
-   cli:
+vars:
+  cli:
+    host: all
     username: cisco
-    password: ABc123456
+    password: Abc123456
     transport: cli
-  tasks:
-   - name: show version
-     ios_command:
-      commands: show run
-     register: output
+
+---
+- name: run show version on remote devices
+  nxos_command:
+    commands: show version
+    provider: "{{ cli }}"
