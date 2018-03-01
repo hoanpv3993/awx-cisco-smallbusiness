@@ -5,13 +5,10 @@
   connection: local
   gather_facts: no
 
-  vars:
-   cli:
-    host: all
-    username: cisco
-    password: Abc123456
-    transport: cli
- - name: run show version on remote devices
-    nxos_command:
-     commands: show version
-     provider: "{{ cli }}"
+  tasks:
+  - name: Command Uptime
+    ios_command:
+      commands:
+        - show run
+    register: system
+  - debug: msg="{{ system.stdout }}"
