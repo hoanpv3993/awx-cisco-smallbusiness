@@ -11,17 +11,8 @@
     username: cisco
     password: Abc123456
     transport: cli
-<<<<<<< HEAD
-   
    tasks:
      - name: run show version on remote devices
        nxos_command:
         commands: show version
         provider: "{{ cli }}"
-=======
-tasks:
-- name: run show version on remote devices
-  nxos_command:
-    commands: show version
-    provider: "{{ cli }}"
->>>>>>> 56ed9e387f1f0cff055c8e937f5cc64c1d2f1c5c
