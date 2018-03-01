@@ -5,9 +5,8 @@ vars:
     username: cisco
     password: Abc123456
     transport: cli
-
----
-- name: run show version on remote devices
-  nxos_command:
-    commands: show version
-    provider: "{{ cli }}"
+   tasks:
+   - name: run show version on remote devices
+     nxos_command:
+      commands: show version
+      provider: "{{ cli }}"
