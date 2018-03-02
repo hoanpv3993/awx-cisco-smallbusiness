@@ -1,16 +1,9 @@
+
 ---
 - name: Gather user information
   hosts: all
   connection: ssh
   gather_facts: no
-
-  vars_prompt:
-  - name: "username"
-    prompt: "Username"
-    private: no
-  - name: "password"
-    prompt: "Password"
-
   tasks:
   - name: Checking
     raw: "show clock"
