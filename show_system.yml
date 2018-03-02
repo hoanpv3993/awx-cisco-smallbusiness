@@ -10,4 +10,5 @@
       wait_for:
         - result[0] contains Description
       register: des
-  - debug: var: des
+  - debug:
+     var: des
