@@ -9,4 +9,5 @@
       commands: show system
       wait_for:
         - result[0] contains Description
-  - debug: msg="{{ stdout }}"
+      register: des
+  - debug: var: des
