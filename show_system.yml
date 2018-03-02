@@ -11,5 +11,4 @@
         - result[0] contains Description
       register: des
   
-   - debug:
-      des_device="{{ des.stdout }}"
+  - debug: msg="{{ des.stdout }}"
