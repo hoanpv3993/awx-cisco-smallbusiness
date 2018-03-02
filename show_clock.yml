@@ -1,14 +1,11 @@
 ---
-
-- name: wipe out demo configs
+- name: Gather user information
   hosts: all
-  connection: local
+  connection: ssh
   gather_facts: no
-
   tasks:
-  - name: Command Uptime
-    ios_command:
-      commands:
-        - show run
-    register: system
-  - debug: msg="{{ system.stdout }}"
+  - name: Checking
+    raw: "show clock"
+    register: result
+  - debug:
+      var: result.stdout_lines
