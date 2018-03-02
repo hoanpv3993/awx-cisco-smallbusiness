@@ -2,7 +2,6 @@
 - hosts: all
   gather_facts: no
   connection: local
-  strategy: debug
   
   tasks:
 #  - name: Enter Mode config
