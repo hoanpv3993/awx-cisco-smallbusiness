@@ -10,4 +10,4 @@
 #    raw: do sh run int gi3  
    - name: configure interface settings
      ios_config:
-       lines: hostname demo
+       lines: do show run int gi4
