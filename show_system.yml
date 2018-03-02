@@ -2,6 +2,7 @@
 - name: Check uptime Demo..!!!
   hosts: all
   gather_facts: no
+  connection: local
   
   tasks:
 
