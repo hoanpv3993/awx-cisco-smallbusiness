@@ -4,5 +4,7 @@
   connection: local
   
   tasks:
-  - name: Check Running config Interfaces
-    raw: "conf t"
+  - name: Enter Mode config
+    raw: conf t
+  - name: Test show run
+    raw: do sh run int gi3  
