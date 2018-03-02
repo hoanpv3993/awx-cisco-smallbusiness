@@ -5,7 +5,7 @@
   
   tasks:
   - name: Check Running config Interfaces
-    ios_config:
-      lines:
+    raw:
+       - conf t
+       - int {{ interface }}
        - do show run int {{ interface }}
-      parents: interface {{ interface }}
