@@ -1,13 +1,10 @@
 ---
 - hosts: all
   gather_facts: no
-  connection: local
+  connection: ssh
   
-  tasks:
-#  - name: Enter Mode config
-#    raw: conf t
-#  - name: Test show run
-#    raw: do sh run int gi3  
-   - name: configure interface settings
-     ios_config:
-       lines: do show run int gi4
+  tasks: 
+   - name: Enter configure mode
+     raw: "configure terminal"
+   - name: Demo show configure
+     raw: "do show run int gi3"
