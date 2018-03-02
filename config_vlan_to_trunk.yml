@@ -5,7 +5,4 @@
   
   tasks:
   - name: Check Running config Interfaces
-    raw:
-       - conf t
-       - int {{ interface }}
-       - do show run int {{ interface }}
+    raw: "conf t"
