@@ -8,5 +8,3 @@
     ios_command:
       commands: show system
       wait_for: result[0] contains "System Description:"
-    register: des
-  - debug: msg="{{ des.stdout }}"
