@@ -5,6 +5,4 @@
   
   tasks: 
    - name: Enter configure mode
-     raw: "configure terminal"
-   - name: Demo show configure
-     raw: "do show run int gi3"
+     raw: "show run int gi3"
