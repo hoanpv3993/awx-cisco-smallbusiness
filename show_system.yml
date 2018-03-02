@@ -1,12 +1,11 @@
 ---
-- name: Check uptime Demo..!!!
-  hosts: all
+- hosts: all
   gather_facts: no
   connection: local
   
   tasks:
 
-  - name: Command Uptime
+  - name: Check System Device
     ios_command:
       commands: show system
     register: system
