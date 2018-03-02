@@ -12,4 +12,4 @@
       register: des
   
    - debug:
-      var: des.stdout_lines
+      des_device="{{ des.stdout }}"
