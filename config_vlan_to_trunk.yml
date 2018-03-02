@@ -4,7 +4,10 @@
   connection: local
   
   tasks:
-  - name: Enter Mode config
-    raw: conf t
-  - name: Test show run
-    raw: do sh run int gi3  
+#  - name: Enter Mode config
+#    raw: conf t
+#  - name: Test show run
+#    raw: do sh run int gi3  
+   - name: configure interface settings
+     ios_config:
+       lines: hostname demo
