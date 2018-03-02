@@ -1,7 +1,8 @@
 ---
 - name: Check uptime Demo..!!!
   hosts: all
-
+  gather_facts: no
+  
   tasks:
 
   - name: Command Uptime
