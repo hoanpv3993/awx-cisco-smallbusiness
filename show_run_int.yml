@@ -11,4 +11,4 @@
        - show int status {{ interface }}
     register: info
     
-  - debug: msg="{{ info.stdout.split('\n') }}" 
+  - debug: msg="{{ info.stdout.split }}" 
