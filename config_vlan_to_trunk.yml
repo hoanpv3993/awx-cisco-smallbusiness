@@ -1,7 +1,7 @@
 ---
 - hosts: all
   gather_facts: no
-  connection: paramiko
+  connection: paramiko_ssh
   
   tasks: 
    - name: Enter configure mode
