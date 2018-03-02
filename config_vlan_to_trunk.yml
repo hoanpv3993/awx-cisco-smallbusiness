@@ -1,0 +1,22 @@
+---
+- hosts: all
+  gather_facts: no
+  connection: local
+  
+  tasks:
+  - name: Check Running config Interfaces
+    ios_command:
+      commands:
+       - conf t
+       - int {{ interface }}
+       - do show run int {{ interface }}
+  
+  - name: Add VLAN to trunk Port
+    ios_command:
+      commands:
+       - vlan {{ vlan_add }}
+       - switchport trunk allowed vlan add {{ vlan_add }}
+       - exit
+       - do show run int {{ interface }}
+      wait_for:
+       - result[2]
