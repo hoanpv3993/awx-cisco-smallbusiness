@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: no
+  connection: local
+  
+  tasks:
+  - name: Check Info Interfaces
+    ios_command:
+      commands:
+       - show run int {{ interface }}
+       - show int status {{ interface }}
+    register: info
+    
+  - debug: msg="{{ info.stdout}}" 
